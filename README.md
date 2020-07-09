@@ -1,7 +1,7 @@
-##Immutable CRUD app
+## Immutable CRUD app
 CRUD app created for learning purposes. Includes 2 pages: list page and form page for adding new jokes.
 
-####Features:
+#### Features:
 - Routing
 - Dependency Injection Container
 - Immutable objects
