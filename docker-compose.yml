@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+  web:
+
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    #image:  src:7.4-apache
+    container_name: php_lenta_svarus
+    depends_on:
+      - db
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - 8000:80
+
+  db:
+    container_name: mysql8_2
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: devuser
+      MYSQL_PASSWORD: devpass
+    ports:
+      - 6333:3306
