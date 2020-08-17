@@ -9,5 +9,3 @@ CRUD app created for learning purposes (PHP+MYSQL). Includes 2 pages: list page 
 - Sort, search functionality
 - Pagination
 - Form validation
-
-
